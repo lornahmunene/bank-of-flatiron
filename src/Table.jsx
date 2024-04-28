@@ -22,7 +22,7 @@ function Table({transactions}) {
                 </tr>
               ))}
             </tbody>
-        </table>
+            </table>
     </div>
   )
 }

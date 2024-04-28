@@ -25,9 +25,40 @@ thead th{
   background-color: gray;
   border-radius: 5px;
   text-align: center;
-  margin-left: 250px;
+  margin-left: 900px;
   border: none;
   padding: 10px;
+  margin-top: 20px;
 
 }
+.my-form{
+  display: flex;
+  flex-direction: row;
+}
+input{
+  flex:1;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+  /* align-items: flex-start;  */
+
+
+.my-form label,
+.my-form input{
+  margin-bottom: 10px;
+}
+
+input{
+  margin-bottom: 5px;
+  margin-left: 10px;}
+  
+.my-table th,
+.my-table td{
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+   
+
 

@@ -16,14 +16,21 @@ const handleSubmit=(e)=>{
     setCategory('');
     setAmount('');
   }
-  const [transactions,setTransactions]=useState([]);
-    const [date,setDate]=useState('');
+  const [transactions,setTransactions]=useState([
+  {date:"12-01-2019",description:"paycheck from Bob's Burgers",category:"income",amount:"1000"},
+  {date:"12-01-2019",description:"South by Southwest Quinoa Bowl at fresh &co",category:"food",amount:"-10.55"},
+  {date:"12-02-2019",description:"South by Southwest Quinoa Bowl at fresh &co",category:"food",amount:"-10.55"},
+  {date:"12-04-2019",description:"Sunglasses",category:"Fashion",amount:"-24.99"},
+  {date:"12-06-2019",description:"Venmo,Alice Pays you for Burrito",category:"food",amount:"8.75"},
+  {date:"12-06-2019",description:"Chipotle",category:"food",amount:"-17.59"}
+  ]);
+  const [date,setDate]=useState('');
     const [description,setDescription]=useState('');
     const [category,setCategory]=useState('');
     const [amount,setAmount]=useState('');
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="my-form">
     <label>Date</label>
     <input type="date" placeholder='Date'value={date} onChange={(e)=>setDate(e.target.value)}/>
     <label></label>
@@ -32,9 +39,12 @@ const handleSubmit=(e)=>{
   <input type="text" placeholder='Category'value={category} onChange={(e)=>setCategory(e.target.value)} />
   <label ></label>
   <input type="number" placeholder='amount' value={amount} onChange={(e)=>setAmount(e.target.value)}/>
-  <button type="submit" class="button">Add Transaction</button>
   </form>
   <div>
+  <button type="submit" class="button">Add Transaction</button>
+  </div>
+  <div>
+
   <Table transactions={transactions}/>
   </div>
   </div>
