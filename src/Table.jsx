@@ -3,7 +3,7 @@ import './App.css';
 function Table({transactions}) {
   return (
     <div>
-        <table class="my-table">
+        <table className="my-table">
             <thead>
                 <tr>
                     <th>Date</th>
